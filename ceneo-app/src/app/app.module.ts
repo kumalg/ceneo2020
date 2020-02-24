@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     AppRoutingModule
   ],
   providers: [],

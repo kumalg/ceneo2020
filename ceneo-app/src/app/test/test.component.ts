@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
+import { TestService } from '../core/test.service';
 
 @Component({
   selector: 'ce-test',
@@ -10,12 +11,14 @@ export class TestComponent implements OnInit {
 
   @Input('testInput') myInput;
   @Output() testOutput = new EventEmitter<string>()
-  constructor() {
-    setTimeout(() => this.testOutput.emit('new data'), 2000)
+  constructor(public testService: TestService) {
+    setTimeout(() => {
+      this.testService.incr();
+      console.log('counter: ' + this.testService.counter)
+    }, 2000)
   }
 
   ngOnInit(): void {
-    console.log(this.myInput)
   }
 
 }

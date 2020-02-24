@@ -1,1 +1,6 @@
-<p>product-list works!</p>
+<div class="list-group">
+  <button type="button"
+  *ngFor="let product of products"
+  class="list-group-item list-group-item-action">
+    {{product.name}}</button>
+</div>
