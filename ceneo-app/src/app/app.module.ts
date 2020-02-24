@@ -16,7 +16,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     HomeComponent,
     ContactComponent,
     NavigationComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,

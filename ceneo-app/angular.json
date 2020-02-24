@@ -23,6 +23,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "ce",
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
