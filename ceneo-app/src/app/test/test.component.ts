@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ce-test',
@@ -8,9 +8,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  @Input('testInput') myInput;
+  @Output() testOutput = new EventEmitter<string>()
+  constructor() {
+    setTimeout(() => this.testOutput.emit('new data'), 2000)
+  }
 
   ngOnInit(): void {
+    console.log(this.myInput)
   }
 
 }

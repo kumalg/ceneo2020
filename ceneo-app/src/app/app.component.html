@@ -1,3 +1,8 @@
 Ceneo APP
-<ce-test></ce-test>
+<ce-test [testInput]="inputData"
+(click)="handleClick($event)"
+(testOutput)="handleTestOutput($event)"></ce-test>
 <div class="test-box">app box</div>
+<button class="btn btn-primary">Baton</button>
+<input #myInput>
+{{ myInput.value }}

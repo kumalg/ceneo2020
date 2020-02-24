@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  inputData = { testNumber: 1, testString: 'dwa' };
   title = 'ceneo-app';
+
+  handleTestOutput(data) {
+    console.log(data)
+  }
+  handleClick(data) {
+    console.log(data)
+  }
 }
