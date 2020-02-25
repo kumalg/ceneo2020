@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { finalize } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
 
   private userSubj = new BehaviorSubject<User>(null)
   user$ = this.userSubj.asObservable()
+  username$ = this.userSubj.pipe(map(user => user?.username))
+  isLoggedIn$ = this.userSubj.pipe(map(user => !!user))
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private router: Router) {
     const user = this.getUserFromLocalStorage()
     if (user) {
       this.userSubj.next(user)
@@ -32,6 +35,7 @@ export class AuthService {
   logout() {
     this.userSubj.next(null)
     this.removeUserFromLocalStorage()
+    this.router.navigateByUrl('/')
   }
 
   getUserFromLocalStorage(): User {

@@ -11,18 +11,19 @@ import { User } from '../models/user';
 export class NavigationComponent implements OnInit {
 
   user$: Observable<User>
+  isLoggedIn$: Observable<boolean>
 
   userIdModel: string = ''
 
   constructor(private authServce: AuthService) {
     this.user$ = this.authServce.user$
+    this.isLoggedIn$ = this.authServce.isLoggedIn$
   }
 
   ngOnInit(): void {
   }
 
   login() {
-    console.log('login ' + this.userIdModel)
     this.authServce.login(this.userIdModel)
   }
 
