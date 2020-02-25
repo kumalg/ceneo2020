@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light navbar-expand bg-light">
-  <div class="nav navbar-nav mx-auto">
+  <div class="nav navbar-nav w-100">
     <a
       class="nav-item nav-link"
       routerLink="/"
@@ -8,5 +8,20 @@
     >Home</a>
     <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products">Products</a>
     <a class="nav-item nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
+
+    <div class="ml-auto">
+      <div *ngIf="user$ | async as user; else loginBox">
+        witaj, <b>{{ user.username }}</b>
+        <button class="ml-2 btn bg-white" (click)="logout()">Wyloguj</button>
+      </div>
+
+      <ng-template #loginBox>
+        <div>
+          <input placeholder="login" type="text" (input)="userIdModel = $event.target.value">
+          <button class="ml-2 btn btn-primary" (click)="login()">Zaloguj</button>
+        </div>
+      </ng-template>
+    </div>
+
   </div>
 </nav>

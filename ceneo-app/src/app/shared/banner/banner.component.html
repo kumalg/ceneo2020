@@ -1,5 +1,6 @@
-<ce-banner-header></ce-banner-header>
+<ce-banner-header>{{ _title }}</ce-banner-header>
 <ce-banner-content>
-  <div class="alert alert-info">Clicks: {{ clickCounter }}</div>
+  {{ content }}
+  <div class="alert alert-info">Clicks: {{ click$ | async }}</div>
   <button class="btn btn-danger" (click)="clickBanner()">Sprawdź</button>
 </ce-banner-content>

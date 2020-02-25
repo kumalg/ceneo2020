@@ -1,3 +1,12 @@
-<div class="test-box">
-  {{ myInput }}
-</div>
+<!-- <div class="test-box">
+  {{ testData$ | async | json }}
+</div> -->
+
+<ng-container *ngIf="testData$ | async as testData; else loader">
+  {{ testData | json }}
+  {{ testData | json }}
+</ng-container>
+
+<ng-template #loader>
+  <div>Loading shit</div>
+</ng-template>
