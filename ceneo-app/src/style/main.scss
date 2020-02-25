@@ -1,0 +1,14 @@
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+@import './fonts';
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: 'proxima-nova', sans-serif;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
+}

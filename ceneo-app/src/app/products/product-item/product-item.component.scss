@@ -1,0 +1,19 @@
+.product-item {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  line-height: 1.25;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__category {
+    font-size: 14px;
+    // font-weight: bold;
+  }
+
+  &__price {
+    margin-left: auto;
+  }
+}
