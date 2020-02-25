@@ -3,7 +3,10 @@
       <a class="nav-item nav-link"
       [routerLinkActiveOptions]="{ exact: true }"
       routerLinkActive="active" routerLink="/">Home</a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products">Products</a>
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products"
+      [routerLinkActiveOptions]="{ exact: true }">Products</a>
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products/reviews"
+      >Reviews</a>
       <a class="nav-item nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
       <a class="nav-item nav-link" routerLinkActive="active" routerLink="/test">Test</a>
     </div>

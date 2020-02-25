@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'add', component: ProductAddComponent },
+  { path: 'reviews', loadChildren: () => import('./reviews/reviews.module').then(m => m.ReviewsModule), pathMatch: 'full' },
   { path: ':id/edit', component: ProductEditComponent }
 ];
 
