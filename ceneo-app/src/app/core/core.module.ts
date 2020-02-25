@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TestService } from './test.service';
 import { environment } from 'src/environments/environment';
+import { SharedModule } from '../shared/shared.module';
 
 const loggerType = environment.logger
 @NgModule({
@@ -12,7 +13,8 @@ const loggerType = environment.logger
     // { provide: NewTestService, useExisting: TestService}
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule.forRoot()
   ]
 })
 export class CoreModule { }
