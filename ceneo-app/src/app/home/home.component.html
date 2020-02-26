@@ -1,7 +1,19 @@
-<p>home works!</p>
-
-<ce-banner title="ala" content="Super kontent ku..o"></ce-banner>
+<ce-banner *ceShowForAdmin title="ala" content="Super kontent ku..o"></ce-banner>
 
 <ce-test
   [inputData]="'inputData'"
 ></ce-test>
+
+<ul>
+  <li ceHighlight="is-odd" ceHighlightSetBorder="true" *ngFor="let item of arr" [ngClass]="{ 'elo elo-2': true, 'is-even': item % 2 === 0 }">
+    {{ item | multiply: 2 | currency: 'USD' }}
+  </li>
+</ul>
+
+<ng-template ceShowForAdmin>
+  <div>izoooo</div>
+</ng-template>
+
+<div *ceShowForAdmin>
+  izoooo
+</div>

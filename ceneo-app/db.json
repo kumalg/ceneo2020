@@ -3,38 +3,34 @@
     "name": "test",
     "value": 1000
   },
-  "auth": [{
-    "id": "alojzy",
-    "username": "Alojzy Ciurlok",
-    "admin": true
-  }, {
-    "id": "buziaczek",
-    "username": "Grażyna Januszowa",
-    "admin": false
-  }],
-  "products": [{
-      "id": "1505a93e-bc9e-4d55-90d3-33fcec33674d",
-      "isActive": true,
-      "price": "64.85",
-      "avatar": "http://placehold.it/64x64",
-      "itemsAvailable": 8,
-      "category": "electronic",
-      "name": "Reprehenderit consequat elit cillum magna voluptate amet ad officia do ad proident.",
-      "description": "Sit irure pariatur nulla sit pariatur nulla. Laborum proident ad culpa excepteur eu irure eiusmod Lorem tempor non veniam in consectetur. Sunt eiusmod adipisicing eu ad nostrud velit dolor ea cillum ut qui elit adipisicing.\n\nAdipisicing laborum labore in esse excepteur dolore ut qui do commodo sit. Exercitation sunt in aute officia nostrud ut incididunt sit culpa consequat in aliqua. Irure sunt commodo excepteur nisi adipisicing ullamco ea consectetur commodo cillum. Sit proident excepteur aliquip eiusmod aliquip ipsum ea aliquip cupidatat consectetur.",
-      "created": 1553640169515,
-      "createdBy": ""
+  "auth": [
+    {
+      "id": "alojzy",
+      "username": "Alojzy Ciurlok",
+      "admin": true
     },
     {
-      "id": "f50a9c4a-2bd9-49e5-a312-2339a749e6e8",
-      "isActive": false,
+      "id": "buziaczek",
+      "username": "Grażyna Januszowa",
+      "admin": false
+    }
+  ],
+  "products": [
+    {
+      "name": "dziala",
+      "description": "desc",
+      "price": "64.85",
+      "category": "food",
+      "isActive": true,
+      "id": "1505a93e-bc9e-4d55-90d3-33fcec33674d"
+    },
+    {
+      "name": "Aliquip eevoluptate culpa veniam est magna occaecat officia.",
+      "description": "efrfefefefe",
       "price": "45.88",
-      "avatar": "http://placehold.it/64x64",
-      "itemsAvailable": 35,
-      "category": "others",
-      "name": "Aliquip ullamco voluptate culpa veniam est magna occaecat officia.",
-      "description": "Ex cupidatat enim in tempor aliqua ullamco ea. Aliquip nostrud nisi nostrud culpa magna sint veniam. Ea in voluptate est sint magna pariatur labore aliqua. Non officia voluptate dolor et nostrud. Commodo ullamco culpa deserunt nisi aute ex. Ad velit cillum do cupidatat magna sit.\n\nIpsum irure qui reprehenderit nisi reprehenderit adipisicing et laborum id magna elit irure sit. Qui culpa consectetur elit ipsum magna aliquip sit velit. Sit ipsum sunt deserunt quis incididunt duis quis qui. Aliqua eu et do sint mollit et incididunt ipsum quis ut. Amet laboris commodo exercitation exercitation esse. Nostrud labore veniam ipsum et occaecat mollit sit esse. Id irure ad ullamco veniam incididunt qui commodo.",
-      "created": 1552845089383,
-      "createdBy": ""
+      "category": "other",
+      "isActive": false,
+      "id": "f50a9c4a-2bd9-49e5-a312-2339a749e6e8"
     },
     {
       "id": "b1161e93-0c6c-404a-aa36-0b48d9a62556",

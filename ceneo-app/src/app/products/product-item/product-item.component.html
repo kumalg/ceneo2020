@@ -10,8 +10,10 @@
 
   </div>
 
-  <div class="product-item__price">
-    {{ product.price }},00 zł
+  <div class="product-item__price d-flex text-nowrap align-items-center">
+    {{ product.price }} zł
+
+    <button class="ml-2 btn btn-light" [routerLink]="['/products', product.id, 'edit']">Edit</button>
   </div>
 
 </div>

@@ -1,0 +1,9 @@
+@import '../../style/variables';
+
+.is-even {
+  color: lightgray;
+}
+
+.is-odd {
+  color: $primary;
+}

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light navbar-expand bg-light">
-  <div class="nav navbar-nav w-100">
+  <div class="nav navbar-nav w-100 d-flex align-items-center">
     <a
       class="nav-item nav-link"
       routerLink="/"
@@ -17,7 +17,7 @@
 
       <ng-template #loginBox>
         <div>
-          <input placeholder="login" type="text" (input)="userIdModel = $event.target.value">
+          <input placeholder="login" type="text" [(ngModel)]="userIdModel">
           <button class="ml-2 btn btn-primary" (click)="login()">Zaloguj</button>
         </div>
       </ng-template>

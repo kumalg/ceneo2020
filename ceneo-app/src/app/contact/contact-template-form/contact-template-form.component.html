@@ -1,0 +1,17 @@
+<h4><b>Template Form</b></h4>
+
+<form #templateForm="ngForm" (submit)="handleSubmit(templateForm.value)">
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input class="form-control" name="email" ngModel="zenek@czy.pl" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Message</label>
+    <textarea class="form-control" name="message" ngModel></textarea>
+  </div>
+
+  <button class="btn btn-primary">Wyślij</button>
+
+</form>

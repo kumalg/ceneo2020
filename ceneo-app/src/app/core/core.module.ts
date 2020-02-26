@@ -7,7 +7,6 @@ import { SharedModule } from '../shared/shared.module';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 
-const loggerType = environment.logger
 @NgModule({
   declarations: [],
   providers: [

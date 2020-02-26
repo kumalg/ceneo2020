@@ -1,3 +1,1 @@
-<p>product-edit works!</p>
-
-<!-- {{id}} -->
+<ce-product-form *ngIf="product$ | async as product" [product]="product" (saveProduct)="handleSave($event)"></ce-product-form>

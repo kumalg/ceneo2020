@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../core/test.service';
-import { AuthService } from '../core/auth.service';
 
 @Component({
   selector: 'ce-home',
@@ -9,13 +8,13 @@ import { AuthService } from '../core/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private testService: TestService, private authService: AuthService) {
-    setTimeout(() => {
-      this.testService.increment();
-      console.log(`counter: ${this.testService.counter}`)
-    }, 2000)
+  arr = [1, 2, 3, 4, 5]
 
-    // this.authService.login('alojzy')
+  constructor(private testService: TestService) {
+    // setTimeout(() => {
+    //   this.testService.increment();
+    //   console.log(`counter: ${this.testService.counter}`)
+    // }, 2000)
   }
 
   ngOnInit(): void {

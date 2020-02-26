@@ -1,5 +1,10 @@
 <!-- <ce-banner></ce-banner> -->
 
-<h2>Lista produktów</h2>
+<div class="d-flex align-items-center justify-content-between">
+  <h2 class="my-2">Lista produktów</h2>
+  <!-- <button class="btn btn-primary">Dodaj</button> -->
+</div>
 
-<ce-product-item *ngFor="let item of productList" [product]="item"></ce-product-item>
+<ng-container *ngIf="productList$ | async as products">
+  <ce-product-item *ngFor="let item of products" [product]="item"></ce-product-item>
+</ng-container>
